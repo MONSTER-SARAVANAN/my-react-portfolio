@@ -2,7 +2,7 @@ const subheadingsData = {
   1: [
     {
       title: "About Me",
-      content: () => (
+      content:  (
         <>
           <p>
             Hi, i'm SARAVANAN , a Full Stack Developer specializing in creating dynamic and
@@ -17,7 +17,7 @@ const subheadingsData = {
   2: [
     {
       title: "2024 Masters Degree",
-      content: () => (
+      content:  (
         <>
           <p>
             2022-2024
@@ -31,7 +31,7 @@ const subheadingsData = {
     },
     {
       title: "2021 Bachelors Degree",
-      content: () => (
+      content:  (
         <>
           <p>
             2018-2021

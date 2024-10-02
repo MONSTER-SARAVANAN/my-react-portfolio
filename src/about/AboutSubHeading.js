@@ -2,20 +2,19 @@ import React, { Component } from "react";
 import classNames from "classnames";
 import "../styles/aboutMenu.css";
 
-class AboutSubheading extends Component {
-  render() {
-    const { title, content, active, onClick, menuItem } = this.props;
-    const subContainerClass = `sub-container-${menuItem}`;
+const AboutSubHeading = ({ title, content, active, onClick, 
+menuItem }) => {
+const subContainerClass = `sub-container-${menuItem}`
 
     return (
-      <div
-        className={classNames(subContainerClass, { "active-subheading": active })}
-      >
-        <h3 onClick={onClick}>{title}</h3>
+      <div className={classNames(subContainerClass, { "active-subheading":
+        active })}
+        >
+        <h3 onClick={onClick}> {title}</h3>
         <div className="p-container">{content}</div>
+
       </div>
     );
-  }
-}
+  };
 
-export default AboutSubheading;
+export default AboutSubHeading;
