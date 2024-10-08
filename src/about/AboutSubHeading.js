@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import classNames from "classnames";
 import "../styles/aboutMenu.css";
 
-const AboutSubHeading = ({ title, content, active, onClick, 
+const AboutSubheading = ({ title, content, active, onClick, 
 menuItem }) => {
 const subContainerClass = `sub-container-${menuItem}`
 
@@ -17,4 +17,4 @@ const subContainerClass = `sub-container-${menuItem}`
     );
   };
 
-export default AboutSubHeading;
+export default AboutSubheading;

@@ -9,7 +9,7 @@ const skills = {
       level: 5,
     },
     {
-      title: "SASS",
+      title: "Bootstrap",
       level: 2,
     },
     {
