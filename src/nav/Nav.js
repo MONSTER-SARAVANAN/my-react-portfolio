@@ -1,4 +1,3 @@
-import React, { Component } from 'react'
 import { Link, useLocation } from "react-router-dom";
 import astronautHelmet from "../assets/astronaut-helmet.png";
 import deadEye from "../assets/dead-eye.png";
