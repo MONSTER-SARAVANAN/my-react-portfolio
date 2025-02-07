@@ -3,7 +3,8 @@ import "../styles/aboutMenu.css";
 
 const AboutSubheading = ({ title, content, active, onClick, 
 menuItem }) => {
-const subContainerClass = `sub-container-${menuItem}`
+const subContainerClass = `sub-container-${menuItem}`;
+
 
     return (
       <div className={classNames(subContainerClass, { "active-subheading":
@@ -16,4 +17,6 @@ const subContainerClass = `sub-container-${menuItem}`
     );
   };
 
+
 export default AboutSubheading;
+
