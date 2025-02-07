@@ -1,6 +1,8 @@
-import projectOne from "../assets/project-1.png";
-import projectTwo from "../assets/project-2.png";
-import projectThree from "../assets/project-3.png";
+import projectOne from "../assets/h-2.jpg";
+import projectTwo from "../assets/b2.png";
+import projectThree from "../assets/m1.jpg";
+import projectFour from "../assets/Travel Diaries.jpg";
+
 
 const projects = [
   {
@@ -15,7 +17,7 @@ const projects = [
         </p>
       </>
     ),
-    github: "https://github.com",
+    // github: "https://github.com",
   },
   {
     id: 2,
@@ -29,7 +31,7 @@ const projects = [
         </p>
       </>
     ),
-    github: "https://github.com",
+    // github: "https://github.com",
   },
   {
     id: 3,
@@ -37,13 +39,26 @@ const projects = [
     image: projectThree,
     description: (
       <>
-        <p>
+     <p>
           This Project is basically used to build an web application program which help people to find and
         </p>
       </>
     ),
     github: "https://github.com",
-  },
+  },   
+  {
+    id: 4,
+    title: "Travel Diaries",
+    image: projectFour,
+    description: (
+      <>
+     <p>
+          Travel Diaries is a platform for sharing travel experinences through Photos, Stories.Users can Document  Their journeys.
+    </p>
+      </>
+    ),
+    github: "https://github.com",
+  },   
 ];
 
 export default projects;

@@ -5,7 +5,7 @@ const PlayerStats = () => {
     return (
         <div id ="playerStats">
             <h1>SARAVANAN M 
-                LEVEL 23</h1>
+                LEVEL 24</h1>
             <div id="playerStats__lines">
                 <span id="playerStats__lines__thick">
 

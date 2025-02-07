@@ -1,16 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import avatarImage from "../assets/saro (1).png";
+// import avatarImage from "../assets/saro (1).png";
 import "../styles/avatar.css";
 
   const Avatar = ({ page}) => {
-    const avatarClass = `avatar ${page}`;
+    // const avatarClass = `avatar ${page}`;
     const spanClass = `shadow-overlay-${page}`;
  
 return (
     <>
     <span className={spanClass}></span>
-    <img src={avatarImage} className= {avatarClass} alt="avatar"/>
+    {/* <img src={avatarImage} className= {avatarClass} alt="avatar"/> */}
     </>
 );
 };

@@ -44,7 +44,7 @@ export default function ContactMenu() {
     const userID = process.env.REACT_APP_EMAILJS_USER_ID;
 
     emailjs
-      .send(serviceID, templateID, sanitizedData, userID)
+      .send(serviceID, templateID, sanitizedData, userID )
       .then((response) => {
         console.log("Email is sent successfully!", response.text);
         setFormData(initialState);
@@ -53,6 +53,7 @@ export default function ContactMenu() {
       })
       .catch((error) => {
         console.error("Email sending failed", error);
+        alert("Something went wrong. Please try again later.");
       })
       .finally(() => {
         setIsLoading(false);
