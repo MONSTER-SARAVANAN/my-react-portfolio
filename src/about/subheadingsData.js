@@ -1,4 +1,4 @@
-const subheadingsData = {
+const SubheadingsData = {
   1: [
     {
       title: "About Me",
@@ -43,4 +43,4 @@ const subheadingsData = {
   ],
 };
 
-export default subheadingsData;
+export default SubheadingsData;
