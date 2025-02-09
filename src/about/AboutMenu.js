@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import AboutMenuItem from "./AboutMenuItem";
 import AboutSubheading from './AboutSubheading';
-import SubheadingsData from './SubheadingsData'; 
+import SubheadingsData from "./SubheadingsData";
 import personalIcon from "../assets/moebius-triangle.png";
 import educationIcon from "../assets/upgrade.png";
 
@@ -38,7 +38,7 @@ export default class AboutMenu extends Component {
         ? educationIcon
         : null;
 
-        const subheadings = SubheadingsData[String(activeMenuItem)] || [];
+    const subheadings = SubheadingsData[activeMenuItem];
 
     return (
       <>

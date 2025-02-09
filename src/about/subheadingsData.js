@@ -1,13 +1,14 @@
-const SubheadingsData = {
+const subheadingsData = {
   1: [
     {
       title: "About Me",
-      content: (
+      content:  (
         <>
           <p>
-            Hi, I'm SARAVANAN, a Full Stack Developer specializing in creating dynamic and
-            user-friendly web applications. I seek challenging opportunities where I can use my
-            skills for the success of an organization.
+            Hi, i'm SARAVANAN , a Full Stack Developer specializing in creating dynamic and
+            user-friendly web applications.
+            I seek challenging Opportunities Where I can use my skills for 
+            the success of an Organization
           </p>
         </>
       ),
@@ -16,26 +17,28 @@ const SubheadingsData = {
   2: [
     {
       title: "2024 Masters Degree",
-      content: (
+      content:  (
         <>
           <p>
-            2022-2024<br />
-            M.Sc (Information Technology)<br />
-            N.M.S.SVN College of Arts & Science<br />
-            Nagamalai-Madurai, Madurai Kamaraj University
+            2022-2024
+            M.Sc(Information Technology)
+            N.M.S.SVN College Of Arts & Science
+            Nagamalai-Madurai
+            Madurai Kamaraj University
           </p>
         </>
       ),
     },
     {
       title: "2021 Bachelors Degree",
-      content: (
+      content:  (
         <>
           <p>
-            2018-2021<br />
-            B.Sc (Information Technology)<br />
-            N.M.S.SVN College of Arts & Science<br />
-            Nagamalai-Madurai, Madurai Kamaraj University
+            2018-2021
+            B.Sc(Information Technology)
+            N.M.S.SVN College Of Arts & Science
+            Nagamalai-Madurai
+            Madurai Kamaraj University
           </p>
         </>
       ),
@@ -43,4 +46,4 @@ const SubheadingsData = {
   ],
 };
 
-export default SubheadingsData;
+export default subheadingsData;
