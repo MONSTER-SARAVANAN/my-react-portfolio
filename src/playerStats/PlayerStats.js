@@ -15,6 +15,7 @@ const PlayerStats = () => {
                 </span>
             </div>
             <h2>Fullstack Developer</h2>
+            <a href="https://github.com/MONSTER-SARAVANAN">GITHUB</a>
         </div>
     );
 };
