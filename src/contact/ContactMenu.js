@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import DOMPurify from "dompurify";
+// import { motion, AnimatePresence } from "framer-motion";
+
 
 export default function ContactMenu() {
   const initialState = {
@@ -42,6 +44,7 @@ export default function ContactMenu() {
     const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
     const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
     const userID = process.env.REACT_APP_EMAILJS_USER_ID;
+console.log(serviceID, templateID, userID, sanitizedData);    
 
     emailjs
       .send(serviceID, templateID, sanitizedData, userID )
@@ -150,5 +153,90 @@ export default function ContactMenu() {
         </div>
       )}
     </div>
+
+    //  <motion.div
+    //       className="contact-menu"
+    //       initial={{ opacity: 0, y: 30 }}
+    //       animate={{ opacity: 1, y: 0 }}
+    //       transition={{ duration: 0.6 }}
+    //     >
+    //       <AnimatePresence mode="wait">
+    //         {!isSent ? (
+    //           <motion.form
+    //             onSubmit={handleSubmit}
+    //             key="form"
+    //             initial={{ opacity: 0, y: 20 }}
+    //             animate={{ opacity: 1, y: 0 }}
+    //             exit={{ opacity: 0, y: -20 }}
+    //             transition={{ duration: 0.4 }}
+    //           >
+    //             {["name", "email", "message"].map((field) => (
+    //               <div className="form-group" key={field}>
+    //                 <label htmlFor={field}>
+    //                   {field.charAt(0).toUpperCase() + field.slice(1)}:
+    //                 </label>
+    //                 {field === "message" ? (
+    //                   <textarea
+    //                     id={field}
+    //                     name={field}
+    //                     placeholder={field}
+    //                     value={formData[field]}
+    //                     onChange={handleChange}
+    //                     className={errors[field] ? "error" : ""}
+    //                     disabled={isLoading}
+    //                   />
+    //                 ) : (
+    //                   <input
+    //                     type={field === "email" ? "email" : "text"}
+    //                     id={field}
+    //                     name={field}
+    //                     placeholder={field}
+    //                     value={formData[field]}
+    //                     onChange={handleChange}
+    //                     className={errors[field] ? "error" : ""}
+    //                     disabled={isLoading}
+    //                   />
+    //                 )}
+    //                 <AnimatePresence>
+    //                   {errors[field] && (
+    //                     <motion.span
+    //                       className="error-message"
+    //                       initial={{ opacity: 0, y: -5 }}
+    //                       animate={{ opacity: 1, y: 0 }}
+    //                       exit={{ opacity: 0, y: -5 }}
+    //                       transition={{ duration: 0.3 }}
+    //                     >
+    //                       {errors[field]}
+    //                     </motion.span>
+    //                   )}
+    //                 </AnimatePresence>
+    //               </div>
+    //             ))}
+    //             <motion.button
+    //               type="submit"
+    //               disabled={isLoading}
+    //               whileHover={{ scale: 1.05 }}
+    //               whileTap={{ scale: 0.95 }}
+    //               className="mt-4"
+    //             >
+    //               {isLoading ? "SENDING..." : "SUBMIT"}
+    //             </motion.button>
+    //           </motion.form>
+    //         ) : (
+    //           <motion.div
+    //             key="success"
+    //             className="success-message text-center"
+    //             initial={{ opacity: 0, scale: 0.9 }}
+    //             animate={{ opacity: 1, scale: 1 }}
+    //             exit={{ opacity: 0 }}
+    //             transition={{ duration: 0.5 }}
+    //           >
+    //             <p className="text-lg font-bold text-green-600">SUCCESS!</p>
+    //             <p>Your message has been successfully sent!</p>
+    //             <p>You can safely leave this page.</p>
+    //           </motion.div>
+    //         )}
+    //       </AnimatePresence>
+    //     </motion.div>
   );
 }
