@@ -65,11 +65,9 @@ h2 {
   margin: 0 auto 1rem auto;
   background-color: transparent;
 
-  /* Neon glow effect */
   box-shadow: 0 0 4px rgba(0, 255, 255, 0.5), 0 0 8px rgba(0, 255, 255, 0.5),
     0 0 12px rgba(0, 255, 255, 0.4), 0 0 16px rgba(0, 255, 255, 0.3);
 
-  /* Floating animation */
   animation: floatGlow 3s ease-in-out infinite;
 }
 

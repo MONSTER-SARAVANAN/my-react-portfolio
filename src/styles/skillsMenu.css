@@ -146,3 +146,28 @@
     transform: translateY(-50%);
   }
 }
+
+/* code */
+.skill-item {
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.skill-sub-container-1,
+.skill-sub-container-2 {
+  transition: all 0.4s ease;
+}
+
+.skill-icon {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.skill-sub-container h3 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #f0f0f0;
+}
+
+.level-point {
+  transition: transform 0.3s ease, background 0.3s ease;
+}
