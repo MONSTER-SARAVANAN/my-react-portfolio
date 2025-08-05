@@ -44,7 +44,6 @@ export default function ContactMenu() {
     const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
     const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
     const userID = process.env.REACT_APP_EMAILJS_USER_ID;
-console.log(serviceID, templateID, userID, sanitizedData);    
 
     emailjs
       .send(serviceID, templateID, sanitizedData, userID )

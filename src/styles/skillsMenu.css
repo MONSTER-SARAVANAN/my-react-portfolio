@@ -138,6 +138,7 @@
     width: 12em;
   }
 }
+
 @media (max-width: 700px) {
   .menu {
     width: 10rem;
@@ -147,27 +148,54 @@
   }
 }
 
-/* code */
-.skill-item {
-  transition: all 0.3s ease;
-  user-select: none;
-}
-
-.skill-sub-container-1,
-.skill-sub-container-2 {
-  transition: all 0.4s ease;
-}
-
-.skill-icon {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.skill-sub-container h3 {
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #f0f0f0;
-}
-
-.level-point {
-  transition: transform 0.3s ease, background 0.3s ease;
+@media (max-width: 500px) {
+  .skill-menu {
+    width: 100vw;
+    min-width: unset;
+    right: 0;
+    left: 0;
+    top: 10%;
+    align-items: center;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+  }
+  .skill-item {
+    width: 95vw;
+    min-width: unset;
+    height: 2.5rem;
+    font-size: 0.9rem;
+    justify-content: center;
+    padding: 0.2rem 0;
+  }
+  .skill-title {
+    font-size: 1rem;
+    padding-right: 1rem;
+  }
+  .skill-item.activeSkill .skill-title {
+    font-size: 1.2rem;
+  }
+  .menu {
+    width: 95vw;
+    left: 0;
+    right: 0;
+    top: 10%;
+    transform: none;
+    padding: 0 0.5rem;
+  }
+  .skill-sub-container-1,
+  .skill-sub-container-2 {
+    gap: 0.2rem;
+  }
+  .level-point {
+    width: 1rem;
+    height: 0.7rem;
+  }
+  h1 {
+    font-size: 0.9rem;
+  }
+  h2,
+  h3,
+  p {
+    font-size: 0.7rem;
+  }
 }

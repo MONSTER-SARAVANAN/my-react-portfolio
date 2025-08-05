@@ -99,3 +99,4 @@ export default class SkillsMenu extends Component {
     );
   }
 }
+
