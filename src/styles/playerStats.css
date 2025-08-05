@@ -42,17 +42,60 @@ h2 {
   #playerStats {
     left: 50%;
     transform: translateX(-50%);
-    width: 8rem;
-    height: 2.5rem;
-    top: 2rem;
+    width: 10rem;
+    height: auto;
+    top: 1.5rem;
+    padding: 0.5rem 0.2rem;
   }
   h1 {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   h2,
   h3,
   p {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+  }
+  .playerStats__gif {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #playerStats {
+    position: static;
+    width: 100vw;
+    min-width: unset;
+    left: 0;
+    top: 0;
+    transform: none;
+    padding: 0.5rem 0;
+    align-items: center;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+  }
+  h1 {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+  h2 {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .playerStats__gif {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.3rem;
+  }
+  #playerStats__lines__thick {
+    width: 60vw;
+    min-width: 80px;
+  }
+  #playerStats__lines__thin {
+    width: 40vw;
+    min-width: 50px;
   }
 }
 
