@@ -1,7 +1,9 @@
 import projectOne from "../assets/h-2.jpg";
 import projectTwo from "../assets/b2.png";
-import projectThree from "../assets/m1.jpg";
-import projectFour from "../assets/Travel Diaries.jpg";
+import projectThree from "../assets/X.jpg";
+import projectFour from "../assets/chat app.jpg";
+import projectFive from "../assets/text to image.png";
+import projectSix from "../assets/i.png";
 
 
 const projects = [
@@ -61,12 +63,26 @@ const projects = [
   {
     id: 5,
     title: "ImagineRise",
-    image: projectFour,
+    image: projectFive,
     description: (
       <>
      <p>
       Easily transform your Ideas into stunning visuals with our MERN stack app. Just type a description, and our AI will generate a unique image for your instantly.
       </p>
+      </>
+    ),
+    github: "https://github.com",
+  }, 
+   {
+    id: 6,
+    title: "VideoCall",
+    image: projectSix,
+    description: (
+      <>
+     <p>
+      Experience seamless video communication with our MERN stack VideoCall app. Connect with friends and family through high-quality video calls, chat, and screen sharing.
+
+            </p>
       </>
     ),
     github: "https://github.com",
