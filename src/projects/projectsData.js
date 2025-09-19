@@ -3,7 +3,7 @@ import projectTwo from "../assets/b2.png";
 import projectThree from "../assets/X.jpg";
 import projectFour from "../assets/chat app.jpg";
 import projectFive from "../assets/text to image.png";
-import projectSix from "../assets/i.png";
+import projectSix from "../assets/CarRental.svg";
 
 
 const projects = [
@@ -75,17 +75,16 @@ const projects = [
   }, 
    {
     id: 6,
-    title: "VideoCall",
+    title: "Car-Rental",
     image: projectSix,
     description: (
       <>
      <p>
-      Experience seamless video communication with our MERN stack VideoCall app. Connect with friends and family through high-quality video calls, chat, and screen sharing.
-
-            </p>
+      🚗 CarRental – Luxury Car Sharing Platform.A modern full-stack MERN application where users can rent, list, and manage luxury cars with secure payments and a smooth booking experience.
+     </p>
       </>
     ),
-    github: "https://github.com",
+    github: "https://car-rental-pi-gilt.vercel.app",
   },  
 ];
 
