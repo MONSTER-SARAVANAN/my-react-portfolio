@@ -1,18 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+*{
+margin:0;
 
-body {
-  font-family: "Russo One", sans-serif;
-  color: white;
-  -webkit-tap-highlight-color: transparent;
+padding:0;
+
+box-sizing:border-box;
 }
 
-:root {
-  --purple: #540351;
-  --blue: #3627b1;
-  --cyan: #25afce;
-  --transparent: #00000000;
-  --radius-left: 3rem 0 0 3rem;
-  --radius-right: 0 3rem 3rem 0;
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:"Russo One",sans-serif;
+color:white;
+overflow-x:hidden;
+background:black;
+-webkit-tap-highlight-color:transparent;
+}
+
+:root{
+--purple:#540351;
+--blue:#3627b1;
+--cyan:#25afce;
+--transparent:#0000;
+--radius-left:3rem 0 0 3rem;
+--radius-right:0 3rem 3rem 0;
+--glass:
+rgba(255,255,255,.05);
+}
+img{
+max-width:100%;
+display:block;
+}
+
+button{
+font-family:inherit;
 }
 
 button:hover,

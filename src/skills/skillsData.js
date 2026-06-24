@@ -22,7 +22,8 @@ const skills = {
     },
     {
       title: "React JS",
-      level: 3,
+      level: 4,
+      color:"#61DAFB",
     },
     {
     title: "Redux",

@@ -1,196 +1,137 @@
-// import { Link, useLocation } from "react-router-dom";
-// import astronautHelmet from "../assets/astronaut-helmet.png";
-// import deadEye from "../assets/dead-eye.png";
-// import stack from "../assets/stack.png";
-// import envelope from "../assets/envelope.png";
-// import "../styles/nav.css";
-
-// export default function Nav() {
-//     const location = useLocation();
-
-//     const getNavPositionClass = () =>{
-//         switch (location.pathname) {
-//             case "/":
-//                 return "nav-about";
-//             case "/skills":
-//                 return "nav-skills";
-//             case "/projects":
-//                 return "nav-projects";
-//             case "/contact":
-//                 return "nav-contact";
-//            default:
-//                 return  "";
-//         }
-          
-//     };
-
-//     const getPageTitle = () => {
-//         switch (location.pathname) {
-//             case "/":
-//                 return "ABOUT";
-//             case "/skills":
-//                 return "SKILLS";
-//             case "/projects":
-//                 return "PROJECTS";
-//             case "/contact":
-//                 return "CONTACT";
-//            default:
-//                 return  "";
-//     }
-// }
-
-//     const navPositionClass = getNavPositionClass();
-//     const pageTitle = getPageTitle();
-
-// const isCurrentPage =(navClass) => {
-//     return navClass === navPositionClass;
-//   };
-//   const renderNavLink = (to, imgSrc,altText, navClass) =>{
-//     const isCurrent = isCurrentPage(navClass);
-//     const linkClass = isCurrent ? "nav-Link current":
-//     "nav-link"
-
-//     return (
-//         <Link to={to} className={linkClass}>
-//         <img src={imgSrc} alt={altText} />
-//         {isCurrent && <h1 className="page-title">{pageTitle}</h1>}
-//         </Link>
-//     );
-//   };
-
-//    return (
-//     <nav className={`nav ${navPositionClass}`}>
-//        {renderNavLink(
-//         "/",
-//         astronautHelmet,
-//         "astronaut helmet icon",
-//         "nav-about"
-//        )}
-//        {renderNavLink(
-//         "/skills",
-//         deadEye,
-//         "deadEye icon",
-//         "nav-skills"
-//        )}
-//        {renderNavLink(
-//         "/projects",
-//         stack,
-//         "stack icon",
-//         "nav-projects"
-//        )}
-//        {renderNavLink(
-//         "/contact",
-//         envelope,
-//         "envelope icon",
-//         "nav-contact"
-//        )}
-    
-//     </nav>
-//    );
-// }
-
-
-
-
-
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
+
 import astronautHelmet from "../assets/astronaut-helmet.png";
 import deadEye from "../assets/dead-eye.png";
 import stack from "../assets/stack.png";
+import certificate from "../assets/certificate.png";
+import resume from "../assets/resume.png";
 import envelope from "../assets/envelope.png";
+
 import "../styles/nav.css";
 
 export default function Nav() {
   const location = useLocation();
 
-  const getNavPositionClass = () => {
-    switch (location.pathname) {
-      case "/":
-        return "nav-about";
-      case "/skills":
-        return "nav-skills";
-      case "/projects":
-        return "nav-projects";
-      case "/contact":
-        return "nav-contact";
-      default:
-        return "";
-    }
-  };
+  const navItems = [
+    {
+      path: "/",
+      title: "ABOUT",
+      icon: astronautHelmet,
+      alt: "about icon",
+    },
 
-  const getPageTitle = () => {
-    switch (location.pathname) {
-      case "/":
-        return "ABOUT";
-      case "/skills":
-        return "SKILLS";
-      case "/projects":
-        return "PROJECTS";
-      case "/contact":
-        return "CONTACT";
-      default:
-        return "";
-    }
-  };
+    {
+      path: "/skills",
+      title: "SKILLS",
+      icon: deadEye,
+      alt: "skills icon",
+    },
 
-  const navPositionClass = getNavPositionClass();
-  const pageTitle = getPageTitle();
+    {
+      path: "/projects",
+      title: "PROJECTS",
+      icon: stack,
+      alt: "projects icon",
+    },
 
-  const isCurrentPage = (navClass) => navClass === navPositionClass;
+    {
+      path: "/certificates",
+      title: "CERTIFICATES",
+      icon: certificate,
+      alt: "certificate icon",
+    },
 
-  const renderNavLink = (to, imgSrc, altText, navClass) => {
-    const isCurrent = isCurrentPage(navClass);
-    const linkClass = isCurrent ? "nav-link current" : "nav-link";
+    {
+      path: "/resume",
+      title: "RESUME",
+      icon: resume,
+      alt: "resume icon",
+    },
 
-    return (
-      <motion.div
-        whileHover={{
-          scale: 1.2,
-          rotate: [0, 8, -8, 0],
-          transition: { duration: 0.6, ease: "easeInOut" },
-        }}
-        whileTap={{ scale: 0.95 }}
-      >
-        <Link to={to} className={linkClass}>
-          <motion.img
-            src={imgSrc}
-            alt={altText}
-            className="nav-icon"
-            animate={
-              isCurrent
-                ? {
-                    y: [0, -4, 0],
-                    transition: {
-                      repeat: Infinity,
-                      duration: 2,
-                      ease: "easeInOut",
-                    },
-                  }
-                : {}
-            }
-          />
-          {isCurrent && (
-            <motion.h1
-              className="page-title"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-            >
-              {pageTitle}
-            </motion.h1>
-          )}
-        </Link>
-      </motion.div>
-    );
-  };
+    {
+      path: "/contact",
+      title: "CONTACT",
+      icon: envelope,
+      alt: "contact icon",
+    },
+  ];
 
   return (
-    <nav className={`nav ${navPositionClass}`}>
-      {renderNavLink("/", astronautHelmet, "astronaut helmet icon", "nav-about")}
-      {renderNavLink("/skills", deadEye, "deadEye icon", "nav-skills")}
-      {renderNavLink("/projects", stack, "stack icon", "nav-projects")}
-      {renderNavLink("/contact", envelope, "envelope icon", "nav-contact")}
-    </nav>
+    <motion.nav
+      className="nav"
+      initial={{
+        opacity: 0,
+        y: -40,
+      }}
+      animate={{
+        opacity: 1,
+        y: 0,
+      }}
+      transition={{
+        duration: 0.6,
+      }}
+    >
+      {navItems.map((item) => {
+        const active = location.pathname === item.path;
+
+        return (
+          <motion.div
+            key={item.path}
+            whileHover={{
+              scale: 1.08,
+              y: -3,
+            }}
+            whileTap={{
+              scale: 0.94,
+            }}
+          >
+            <Link
+              to={item.path}
+              className={`nav-link ${active ? "current" : ""}`}
+            >
+              <motion.img
+                src={item.icon}
+                alt={item.alt}
+                className="nav-icon"
+                animate={
+                  active
+                    ? {
+                        y: [0, -4, 0],
+                      }
+                    : {}
+                }
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                }}
+              />
+
+              <motion.span
+                className="page-title"
+                initial={false}
+                animate={{
+                  opacity: active ? 1 : 0.75,
+                }}
+              >
+                {item.title}
+              </motion.span>
+
+              {active && (
+                <motion.div
+                  className="active-indicator"
+                  layoutId="activeIndicator"
+                  transition={{
+                    type: "spring",
+                    stiffness: 350,
+                    damping: 28,
+                  }}
+                />
+              )}
+            </Link>
+          </motion.div>
+        );
+      })}
+    </motion.nav>
   );
 }

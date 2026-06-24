@@ -4,7 +4,8 @@ import projectThree from "../assets/X.jpg";
 import projectFour from "../assets/chat app.jpg";
 import projectFive from "../assets/text to image.png";
 import projectSix from "../assets/CarRental.svg";
-
+import projectSeven from "../assets/grocery-delivery.jpg";
+import projectEight from "../assets/Virtual-Assistant.png";
 
 const projects = [
   {
@@ -71,7 +72,7 @@ const projects = [
       </p>
       </>
     ),
-    github: "https://github.com",
+    github: "https://imagine-rise.vercel.app",
   }, 
    {
     id: 6,
@@ -80,11 +81,38 @@ const projects = [
     description: (
       <>
      <p>
-      🚗 CarRental – Luxury Car Sharing Platform.A modern full-stack MERN application where users can rent, list, and manage luxury cars with secure payments and a smooth booking experience.
+       CarRental – Luxury Car Sharing Platform.A modern full-stack MERN application where users can rent, list, and manage luxury cars with secure payments and a smooth booking experience.
      </p>
       </>
     ),
     github: "https://car-rental-pi-gilt.vercel.app",
+  }, 
+  {
+    id: 7,
+    title: "Grocery Delivery App",
+    image: projectSeven,
+    description: (
+      <>
+     <p>
+      Developed a high-performance PERN stack(PostgreSQL, Express, React, Nodejs) grocery delivery web application using Typescript and Tailwind CSS. Built type-safe database schemas using
+      Prisma ORM hosted on serverless Neon DB. Integrated Inngest for background task queuing and stripe API for secure, automated payment checkout workflows.
+     </p>
+      </>
+    ),
+    github: "https://grocery-deleivery-app.vercel.app",
+  },  
+  {
+    id: 8,
+    title: "Virtual Assistant",
+    image: projectEight,
+    description: (
+      <>
+     <p>
+      A smart virtual assistant built with React and Node.js, designed to help users manage their daily tasks, set reminders, and access information instantly.
+     </p>
+      </>
+    ),
+    github: "https://virtual-assistant-iota-ivory.vercel.app",
   },  
 ];
 
