@@ -1,24 +1,7 @@
 import React from "react";
-import { motion } from "framer-motion";
 import certificates from "./certificatesData";
 import "../styles/certificates.css";
 
-const cardVariants = {
-  hidden: {
-    opacity: 0,
-    y: 40,
-  },
-
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-
-    transition: {
-      delay: i * 0.08,
-      duration: 0.5,
-    },
-  }),
-};
 
 export default function CertificatesGrid() {
   return (
